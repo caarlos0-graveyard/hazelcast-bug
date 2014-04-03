@@ -9,8 +9,7 @@ mvn clean compile assembly:single
 HZ_IP=8.8.8.8 java -jar target/ec2-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-Hazelcast will stop in the "STARTED" log and will never exit.
-
-If it happens inside an app server (like jBoss), this is very likely to rollback
+Hazelcast will stop in the "STARTED" log and will exit after a loooong time. If it
+happens inside an app server (like jBoss), this is very likely to rollback
 the deploy due to timeout.
 
